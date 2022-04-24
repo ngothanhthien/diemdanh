@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ableInput {
+    @apply cursor-pointer text-white bg-sky-500;
+}
