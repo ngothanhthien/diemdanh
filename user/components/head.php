@@ -6,5 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../root/tailwind.css">
     <title>Document</title>
+    <script src="../assets/script.js"></script>
 </head>
 <body>
+<main class="bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative">
+<div class="flex items-start justify-between">
