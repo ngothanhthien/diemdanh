@@ -8,7 +8,7 @@
                 <img src="../../root/default_image/default-avatar.jpg" class="mx-auto object-cover rounded-full h-20 w-20 " />
             </a>
         </div>
-        <div class="flex items-center justify-center pt-2 text-gray-500 dark:text-gray-200">Chào Ngô Thanh Thiên!</div>
+        <div class="flex items-center justify-center pt-2 text-gray-500 dark:text-gray-200">Chào <?php echo $_SESSION['lecture_name'] ?>!</div>
         <!-- avatar -->
         <!-- *******-->
         <nav class="mt-6">

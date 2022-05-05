@@ -8,3 +8,11 @@ function setCssSidebar(currentTabId){
         }
     }
 }
+function fetchAPIFormData(formData,url,callback){
+    fetch(url,{
+        body: formData,
+        method: 'post',
+    })
+    .then((res)=>res.json())
+    .then(callback);
+}
