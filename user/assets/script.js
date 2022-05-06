@@ -8,11 +8,13 @@ function setCssSidebar(currentTabId){
         }
     }
 }
-function fetchAPIFormData(formData,url,callback){
-    fetch(url,{
+async function fetchAPIFormData(formData,url){
+    let response=await fetch(url,{
         body: formData,
         method: 'post',
     })
-    .then((res)=>res.json())
-    .then(callback);
+    return await response.json();
+}
+function closePopup(target){
+    document.getElementById(target).style.display = "none";
 }

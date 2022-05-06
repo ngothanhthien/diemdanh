@@ -11,6 +11,7 @@ $sql = "SELECT id,name FROM lectures WHERE account = '$account' and password = '
 $result =$mysqli->query($sql);
 $count = mysqli_num_rows($result);
 $row = $result -> fetch_all(MYSQLI_ASSOC);
+require_once '../../root/database_close.php';
 if($count == 1) {
     $_SESSION['lecture'] = $row[0]['id'];
     $_SESSION['lecture_name']=$row[0]['name'];
@@ -20,4 +21,3 @@ if($count == 1) {
     $_SESSION['message_lecture']='Sai tài khoản hoặc mật khẩu';
     header('Location: ../layouts/login.php');
  }
-require_once '../../root/database_close.php';

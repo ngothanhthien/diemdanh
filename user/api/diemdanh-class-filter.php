@@ -8,9 +8,10 @@ require_once '../../root/database_connect.php';
 $subject=$_POST['subject'];
 $lecture=$_SESSION['lecture'];
 $classRoom=$mysqli->query("
-select classes.id as class_id, classes.name as class_name from 
+select classes.id as class_id, classes.name as class_name,academic_years.name as class_year from 
 (SELECT class_id FROM `assigns` WHERE lecture_id=$lecture and subject_id=$subject) as subclass
 inner join classes on class_id=classes.id
+inner join academic_years on academic_year_id=academic_years.id
 ");
 $classRoom=mysqli_fetch_all($classRoom,MYSQLI_ASSOC);
 require_once '../../root/database_close.php';
